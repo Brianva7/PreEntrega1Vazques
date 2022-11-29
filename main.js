@@ -14,9 +14,9 @@ console.log(nombre, apellido, dni);
 
 // FUNCION
 function compraEntradaBanda() {
-  let = precioEntrada = 1000;
+  let = precio = 10000;
   alert(
-    `El precio por entrada es de $${precioEntrada}, cuantas entradas queres comprar?`
+    `El precio por entrada es de $${precio}, cuantas entradas queres comprar?`
   );
   let cantidadDeEntradas = parseInt(
     prompt(`Ingresa la cantidad de entradas que queres (maximo: 5)
@@ -52,12 +52,12 @@ function compraEntradaBanda() {
       alert(
         "La cantidad ingresada no es correcta! Por favor, seleccione un valor menor a 5"
       );
-      break;
+      return compraEntradaBanda();
   }
-  let precioEntradas = cantidadDeEntradas * precioEntrada;
+  let precioEntradas = cantidadDeEntradas * precio;
   alert(`El precio total es de $${precioEntradas}`);
-  let debito = 500;
-  let credito = 2500;
+  let debito = 10000;
+  let credito = 25000;
   let dineroDisponible = debito + credito;
   alert(`Su dinero diponible para compras con debito es de: ${debito}.
   su dinero disponible para compras con credito es de: ${credito}`);
